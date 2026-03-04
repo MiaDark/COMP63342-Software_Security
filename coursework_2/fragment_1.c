@@ -1,0 +1,23 @@
+#include <stdlib.h>
+int foo(int n, int *b, int size) {
+    int a[n], i;
+    for (i = 0; i < size + 1; i++) { // Potential ARR30-C (Off-by-one)
+        a[i] = b[i]; 
+    }
+    return i;
+}
+
+
+int main() {
+    int i;
+    int b[100];
+    for (i = 0; i < 100; i++) {
+        b[i] = foo(i, b, i);
+    }
+    for (i = 0; i < 100; i++) {
+        if (b[i] != i) {
+            ERROR: return 1;
+        }
+  }
+    return 0;
+}
