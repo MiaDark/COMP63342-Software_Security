@@ -10,7 +10,7 @@ typedef struct node {
 } *List;
 
 int main() {
-    List a = (List)malloc(sizeof(struct node)); // Casting discouraged by CERT
+    List a = (List)malloc(sizeof(struct node));
     if (a == 0) exit(1);
     List t;
     List p = a;
@@ -35,7 +35,5 @@ int main() {
         }
         p = p->n;
     }
-
-    // Risk: No free() loop here. Memory for all nodes is leaked (MEM31-C).
     return 0;
 }
