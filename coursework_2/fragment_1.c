@@ -1,7 +1,6 @@
-#include <stdlib.h>
-int foo(int n, int *b, int size) {
+int foo(int n, int b[], int size) {
     int a[n], i;
-    for (i = 0; i < size + 1; i++) { // Potential ARR30-C (Off-by-one)
+    for (i = 0; i < size + 1; i++) {
         a[i] = b[i]; 
     }
     return i;
