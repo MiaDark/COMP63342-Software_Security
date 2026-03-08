@@ -4,12 +4,10 @@
 void myexit(int s) {
     exit(s);
 }
-
 typedef struct node {
     int h;
     struct node *n;
 } *List;
-
 int main() {
     List a = (List)malloc(sizeof(struct node));
     if (a == NULL) exit(1);
@@ -20,7 +18,6 @@ int main() {
     List p = a;
     int count = 0;
 
-    // FIX: bounded loop so ESBMC can fully unroll
     while (__VERIFIER_nondet_int() && count < MAX_NODES) {
         List t = (List)malloc(sizeof(struct node));
         if (t == NULL) myexit(1);
@@ -32,7 +29,6 @@ int main() {
         p = t;
         count++;
     }
-
     // Verify all nodes have h==2
     p = a;
     while (p != 0) {
@@ -41,7 +37,6 @@ int main() {
         }
         p = p->n;
     }
-
     // FIX MEM31-C: free entire list
     p = a;
     while (p != 0) {
@@ -49,6 +44,5 @@ int main() {
         free(p);
         p = next;
     }
-
     return 0;
 }
