@@ -36,6 +36,11 @@ jobs:
       - name: Compile fixed versions
         working-directory: coursework_2/fixed
         run: |
+          # SV-COMP stubs for verification functions
+          cat > stubs.c << 'EOF'
+          int __VERIFIER_nondet_int() { return rand() % 2; }
+          void __VERIFIER_error() { exit(1); }
+          EOF
           gcc -o fragment_1 fragment_1.c stubs.c -DRAND_MAX=1
           gcc -o fragment_2 fragment_2.c stubs.c -DRAND_MAX=1
           gcc -o fragment_3 fragment_3.c stubs.c -DRAND_MAX=1
