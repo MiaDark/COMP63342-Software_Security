@@ -1,0 +1,49 @@
+name: Coursework 2 CI
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'coursework_2/**'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'coursework_2/**'
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install GCC
+        run: sudo apt-get update && sudo apt-get install -y gcc
+
+      - name: Compile fragments
+        working-directory: coursework_2
+        run: |
+          gcc -o fragment_1 fragment_1.c
+          gcc -o fragment_2 fragment_2.c
+          gcc -o fragment_3 fragment_3.c
+
+      - name: Compile fixed versions
+        working-directory: coursework_2/fixed
+        run: |
+          gcc -o fragment_1 fragment_1.c
+          gcc -o fragment_2 fragment_2.c
+          gcc -o fragment_3 fragment_3.c
+
+      - name: Run original fragments
+        working-directory: coursework_2
+        run: |
+          ./fragment_1 || true
+          ./fragment_2 || true
+          ./fragment_3 || true
+
+      - name: Run fixed versions
+        working-directory: coursework_2/fixed
+        run: |
+          ./fragment_1
+          ./fragment_2
+          ./fragment_3

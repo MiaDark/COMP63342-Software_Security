@@ -1,0 +1,31 @@
+name: Coursework 4 CI
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'coursework_4/**'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'coursework_4/**'
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install Z3
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y z3 libz3-dev
+
+      - name: Compile
+        working-directory: coursework_4
+        run: gcc -o cw_1 cw_1.c -I/usr/include -L/usr/lib -lz3
+
+      - name: Run
+        working-directory: coursework_4
+        run: ./cw_1
