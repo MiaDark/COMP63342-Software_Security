@@ -7,8 +7,5 @@ on:
     branches: [main]
 
 jobs:
-  coursework-2:
-    uses: ./.github/workflows/coursework_2.yml
-
   coursework-4:
     uses: ./.github/workflows/coursework_4.yml
