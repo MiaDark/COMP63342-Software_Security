@@ -1,0 +1,242 @@
+**** WARNING: Use --unwinding-assertions to obtain sound verification results
+CBMC version 6.9.0 (cbmc-6.9.0) 64-bit arm64 macos
+Type-checking _cs_cw_2_input
+file /Users/miadark/Projects/COMP63342-Software_Security/coursework_4/_cs_cw_2_input.c line 105 function __cs_init_scalar: function 'malloc' is not declared
+file /Users/miadark/Projects/COMP63342-Software_Security/coursework_4/_cs_cw_2_input.c line 400 function t1_0: function 'assert' is not declared
+Generating GOTO Program
+Adding CPROVER library (arm64)
+file <builtin-library-malloc> line 11: implicit function declaration 'malloc'
+old definition in module _cs_cw_2_input file /Users/miadark/Projects/COMP63342-Software_Security/coursework_4/_cs_cw_2_input.c line 105 function __cs_init_scalar
+void * (void)
+new definition in module <built-in-library> file <builtin-library-malloc> line 11
+void * (__CPROVER_size_t malloc_size)
+Removal of function pointers and virtual functions
+Generic Property Instrumentation
+Starting Bounded Model Checking
+Passing problem to propositional reduction
+converting SSA
+Running propositional reduction
+SAT checker: instance is UNSATISFIABLE
+
+** Results:
+/Users/miadark/Projects/COMP63342-Software_Security/coursework_4/_cs_cw_2_input.c function __cs_init_scalar
+[__cs_init_scalar.pointer_dereference.1] line 100 dereference failure: pointer NULL in *((signed int *)__cs_var): SUCCESS
+[__cs_init_scalar.pointer_dereference.2] line 100 dereference failure: pointer invalid in *((signed int *)__cs_var): SUCCESS
+[__cs_init_scalar.pointer_dereference.3] line 100 dereference failure: deallocated dynamic object in *((signed int *)__cs_var): SUCCESS
+[__cs_init_scalar.pointer_dereference.4] line 100 dereference failure: dead object in *((signed int *)__cs_var): SUCCESS
+[__cs_init_scalar.pointer_dereference.5] line 100 dereference failure: pointer outside object bounds in *((signed int *)__cs_var): SUCCESS
+[__cs_init_scalar.pointer_dereference.6] line 100 dereference failure: invalid integer address in *((signed int *)__cs_var): SUCCESS
+
+/Users/miadark/Projects/COMP63342-Software_Security/coursework_4/_cs_cw_2_input.c function main_thread
+[main_thread.assertion.1] line 484 assertion g == 0: SUCCESS
+
+/Users/miadark/Projects/COMP63342-Software_Security/coursework_4/_cs_cw_2_input.c function pthread_barrier_destroy
+[pthread_barrier_destroy.pointer_dereference.1] line 311 dereference failure: pointer NULL in __cs_barrier_to_destroy->init: SUCCESS
+[pthread_barrier_destroy.pointer_dereference.2] line 311 dereference failure: pointer invalid in __cs_barrier_to_destroy->init: SUCCESS
+[pthread_barrier_destroy.pointer_dereference.3] line 311 dereference failure: deallocated dynamic object in __cs_barrier_to_destroy->init: SUCCESS
+[pthread_barrier_destroy.pointer_dereference.4] line 311 dereference failure: dead object in __cs_barrier_to_destroy->init: SUCCESS
+[pthread_barrier_destroy.pointer_dereference.5] line 311 dereference failure: pointer outside object bounds in __cs_barrier_to_destroy->init: SUCCESS
+[pthread_barrier_destroy.pointer_dereference.6] line 311 dereference failure: invalid integer address in __cs_barrier_to_destroy->init: SUCCESS
+[pthread_barrier_destroy.pointer_dereference.7] line 313 dereference failure: pointer NULL in __cs_barrier_to_destroy->current: SUCCESS
+[pthread_barrier_destroy.pointer_dereference.8] line 313 dereference failure: pointer invalid in __cs_barrier_to_destroy->current: SUCCESS
+[pthread_barrier_destroy.pointer_dereference.9] line 313 dereference failure: deallocated dynamic object in __cs_barrier_to_destroy->current: SUCCESS
+[pthread_barrier_destroy.pointer_dereference.10] line 313 dereference failure: dead object in __cs_barrier_to_destroy->current: SUCCESS
+[pthread_barrier_destroy.pointer_dereference.11] line 313 dereference failure: pointer outside object bounds in __cs_barrier_to_destroy->current: SUCCESS
+[pthread_barrier_destroy.pointer_dereference.12] line 313 dereference failure: invalid integer address in __cs_barrier_to_destroy->current: SUCCESS
+
+/Users/miadark/Projects/COMP63342-Software_Security/coursework_4/_cs_cw_2_input.c function pthread_barrier_init
+[pthread_barrier_init.pointer_dereference.1] line 300 dereference failure: pointer NULL in __cs_barrier_to_init->current: SUCCESS
+[pthread_barrier_init.pointer_dereference.2] line 300 dereference failure: pointer invalid in __cs_barrier_to_init->current: SUCCESS
+[pthread_barrier_init.pointer_dereference.3] line 300 dereference failure: deallocated dynamic object in __cs_barrier_to_init->current: SUCCESS
+[pthread_barrier_init.pointer_dereference.4] line 300 dereference failure: dead object in __cs_barrier_to_init->current: SUCCESS
+[pthread_barrier_init.pointer_dereference.5] line 300 dereference failure: pointer outside object bounds in __cs_barrier_to_init->current: SUCCESS
+[pthread_barrier_init.pointer_dereference.6] line 300 dereference failure: invalid integer address in __cs_barrier_to_init->current: SUCCESS
+[pthread_barrier_init.pointer_dereference.7] line 302 dereference failure: pointer NULL in __cs_barrier_to_init->init: SUCCESS
+[pthread_barrier_init.pointer_dereference.8] line 302 dereference failure: pointer invalid in __cs_barrier_to_init->init: SUCCESS
+[pthread_barrier_init.pointer_dereference.9] line 302 dereference failure: deallocated dynamic object in __cs_barrier_to_init->init: SUCCESS
+[pthread_barrier_init.pointer_dereference.10] line 302 dereference failure: dead object in __cs_barrier_to_init->init: SUCCESS
+[pthread_barrier_init.pointer_dereference.11] line 302 dereference failure: pointer outside object bounds in __cs_barrier_to_init->init: SUCCESS
+[pthread_barrier_init.pointer_dereference.12] line 302 dereference failure: invalid integer address in __cs_barrier_to_init->init: SUCCESS
+
+/Users/miadark/Projects/COMP63342-Software_Security/coursework_4/_cs_cw_2_input.c function pthread_barrier_wait_1
+[pthread_barrier_wait_1.pointer_dereference.1] line 322 dereference failure: pointer NULL in __cs_barrier_to_wait->current: SUCCESS
+[pthread_barrier_wait_1.pointer_dereference.2] line 322 dereference failure: pointer invalid in __cs_barrier_to_wait->current: SUCCESS
+[pthread_barrier_wait_1.pointer_dereference.3] line 322 dereference failure: deallocated dynamic object in __cs_barrier_to_wait->current: SUCCESS
+[pthread_barrier_wait_1.pointer_dereference.4] line 322 dereference failure: dead object in __cs_barrier_to_wait->current: SUCCESS
+[pthread_barrier_wait_1.pointer_dereference.5] line 322 dereference failure: pointer outside object bounds in __cs_barrier_to_wait->current: SUCCESS
+[pthread_barrier_wait_1.pointer_dereference.6] line 322 dereference failure: invalid integer address in __cs_barrier_to_wait->current: SUCCESS
+
+/Users/miadark/Projects/COMP63342-Software_Security/coursework_4/_cs_cw_2_input.c function pthread_barrier_wait_2
+[pthread_barrier_wait_2.pointer_dereference.1] line 331 dereference failure: pointer NULL in __cs_barrier_to_wait->current: SUCCESS
+[pthread_barrier_wait_2.pointer_dereference.2] line 331 dereference failure: pointer invalid in __cs_barrier_to_wait->current: SUCCESS
+[pthread_barrier_wait_2.pointer_dereference.3] line 331 dereference failure: deallocated dynamic object in __cs_barrier_to_wait->current: SUCCESS
+[pthread_barrier_wait_2.pointer_dereference.4] line 331 dereference failure: dead object in __cs_barrier_to_wait->current: SUCCESS
+[pthread_barrier_wait_2.pointer_dereference.5] line 331 dereference failure: pointer outside object bounds in __cs_barrier_to_wait->current: SUCCESS
+[pthread_barrier_wait_2.pointer_dereference.6] line 331 dereference failure: invalid integer address in __cs_barrier_to_wait->current: SUCCESS
+[pthread_barrier_wait_2.pointer_dereference.7] line 333 dereference failure: pointer NULL in __cs_barrier_to_wait->init: SUCCESS
+[pthread_barrier_wait_2.pointer_dereference.8] line 333 dereference failure: pointer invalid in __cs_barrier_to_wait->init: SUCCESS
+[pthread_barrier_wait_2.pointer_dereference.9] line 333 dereference failure: deallocated dynamic object in __cs_barrier_to_wait->init: SUCCESS
+[pthread_barrier_wait_2.pointer_dereference.10] line 333 dereference failure: dead object in __cs_barrier_to_wait->init: SUCCESS
+[pthread_barrier_wait_2.pointer_dereference.11] line 333 dereference failure: pointer outside object bounds in __cs_barrier_to_wait->init: SUCCESS
+[pthread_barrier_wait_2.pointer_dereference.12] line 333 dereference failure: invalid integer address in __cs_barrier_to_wait->init: SUCCESS
+
+/Users/miadark/Projects/COMP63342-Software_Security/coursework_4/_cs_cw_2_input.c function pthread_cond_broadcast
+[pthread_cond_broadcast.pointer_dereference.1] line 279 dereference failure: pointer NULL in *__cs_cond_to_broadcast: SUCCESS
+[pthread_cond_broadcast.pointer_dereference.2] line 279 dereference failure: pointer invalid in *__cs_cond_to_broadcast: SUCCESS
+[pthread_cond_broadcast.pointer_dereference.3] line 279 dereference failure: deallocated dynamic object in *__cs_cond_to_broadcast: SUCCESS
+[pthread_cond_broadcast.pointer_dereference.4] line 279 dereference failure: dead object in *__cs_cond_to_broadcast: SUCCESS
+[pthread_cond_broadcast.pointer_dereference.5] line 279 dereference failure: pointer outside object bounds in *__cs_cond_to_broadcast: SUCCESS
+[pthread_cond_broadcast.pointer_dereference.6] line 279 dereference failure: invalid integer address in *__cs_cond_to_broadcast: SUCCESS
+
+/Users/miadark/Projects/COMP63342-Software_Security/coursework_4/_cs_cw_2_input.c function pthread_cond_destroy
+[pthread_cond_destroy.pointer_dereference.1] line 239 dereference failure: pointer NULL in *__cs_cond_to_destroy: SUCCESS
+[pthread_cond_destroy.pointer_dereference.2] line 239 dereference failure: pointer invalid in *__cs_cond_to_destroy: SUCCESS
+[pthread_cond_destroy.pointer_dereference.3] line 239 dereference failure: deallocated dynamic object in *__cs_cond_to_destroy: SUCCESS
+[pthread_cond_destroy.pointer_dereference.4] line 239 dereference failure: dead object in *__cs_cond_to_destroy: SUCCESS
+[pthread_cond_destroy.pointer_dereference.5] line 239 dereference failure: pointer outside object bounds in *__cs_cond_to_destroy: SUCCESS
+[pthread_cond_destroy.pointer_dereference.6] line 239 dereference failure: invalid integer address in *__cs_cond_to_destroy: SUCCESS
+
+/Users/miadark/Projects/COMP63342-Software_Security/coursework_4/_cs_cw_2_input.c function pthread_cond_init
+[pthread_cond_init.pointer_dereference.1] line 230 dereference failure: pointer NULL in *__cs_cond_to_init: SUCCESS
+[pthread_cond_init.pointer_dereference.2] line 230 dereference failure: pointer invalid in *__cs_cond_to_init: SUCCESS
+[pthread_cond_init.pointer_dereference.3] line 230 dereference failure: deallocated dynamic object in *__cs_cond_to_init: SUCCESS
+[pthread_cond_init.pointer_dereference.4] line 230 dereference failure: dead object in *__cs_cond_to_init: SUCCESS
+[pthread_cond_init.pointer_dereference.5] line 230 dereference failure: pointer outside object bounds in *__cs_cond_to_init: SUCCESS
+[pthread_cond_init.pointer_dereference.6] line 230 dereference failure: invalid integer address in *__cs_cond_to_init: SUCCESS
+
+/Users/miadark/Projects/COMP63342-Software_Security/coursework_4/_cs_cw_2_input.c function pthread_cond_signal
+[pthread_cond_signal.pointer_dereference.1] line 268 dereference failure: pointer NULL in *__cs_cond_to_signal: SUCCESS
+[pthread_cond_signal.pointer_dereference.2] line 268 dereference failure: pointer invalid in *__cs_cond_to_signal: SUCCESS
+[pthread_cond_signal.pointer_dereference.3] line 268 dereference failure: deallocated dynamic object in *__cs_cond_to_signal: SUCCESS
+[pthread_cond_signal.pointer_dereference.4] line 268 dereference failure: dead object in *__cs_cond_to_signal: SUCCESS
+[pthread_cond_signal.pointer_dereference.5] line 268 dereference failure: pointer outside object bounds in *__cs_cond_to_signal: SUCCESS
+[pthread_cond_signal.pointer_dereference.6] line 268 dereference failure: invalid integer address in *__cs_cond_to_signal: SUCCESS
+
+/Users/miadark/Projects/COMP63342-Software_Security/coursework_4/_cs_cw_2_input.c function pthread_cond_wait_2
+[pthread_cond_wait_2.pointer_dereference.1] line 257 dereference failure: pointer NULL in *__cs_cond_to_wait_for: SUCCESS
+[pthread_cond_wait_2.pointer_dereference.2] line 257 dereference failure: pointer invalid in *__cs_cond_to_wait_for: SUCCESS
+[pthread_cond_wait_2.pointer_dereference.3] line 257 dereference failure: deallocated dynamic object in *__cs_cond_to_wait_for: SUCCESS
+[pthread_cond_wait_2.pointer_dereference.4] line 257 dereference failure: dead object in *__cs_cond_to_wait_for: SUCCESS
+[pthread_cond_wait_2.pointer_dereference.5] line 257 dereference failure: pointer outside object bounds in *__cs_cond_to_wait_for: SUCCESS
+[pthread_cond_wait_2.pointer_dereference.6] line 257 dereference failure: invalid integer address in *__cs_cond_to_wait_for: SUCCESS
+
+/Users/miadark/Projects/COMP63342-Software_Security/coursework_4/_cs_cw_2_input.c function pthread_create_2
+[pthread_create_2.pointer_dereference.1] line 134 dereference failure: pointer NULL in *__cs_new_thread_id: SUCCESS
+[pthread_create_2.pointer_dereference.2] line 134 dereference failure: pointer invalid in *__cs_new_thread_id: SUCCESS
+[pthread_create_2.pointer_dereference.3] line 134 dereference failure: deallocated dynamic object in *__cs_new_thread_id: SUCCESS
+[pthread_create_2.pointer_dereference.4] line 134 dereference failure: dead object in *__cs_new_thread_id: SUCCESS
+[pthread_create_2.pointer_dereference.5] line 134 dereference failure: pointer outside object bounds in *__cs_new_thread_id: SUCCESS
+[pthread_create_2.pointer_dereference.6] line 134 dereference failure: invalid integer address in *__cs_new_thread_id: SUCCESS
+[pthread_create_2.array_bounds.1] line 136 array '__cs_active_thread' lower bound in __cs_active_thread[(signed long int)__cs_threadID]: SUCCESS
+[pthread_create_2.array_bounds.2] line 136 array '__cs_active_thread' upper bound in __cs_active_thread[(signed long int)__cs_threadID]: SUCCESS
+[pthread_create_2.array_bounds.3] line 138 array '__cs_threadargs' lower bound in __cs_threadargs[(signed long int)__cs_threadID]: SUCCESS
+[pthread_create_2.array_bounds.4] line 138 array '__cs_threadargs' upper bound in __cs_threadargs[(signed long int)__cs_threadID]: SUCCESS
+
+/Users/miadark/Projects/COMP63342-Software_Security/coursework_4/_cs_cw_2_input.c function pthread_exit
+[pthread_exit.array_bounds.1] line 158 array '__cs_keys'[] lower bound in __cs_keys[(signed long int)0][(signed long int)((signed int)__cs_thread_index + 1)]: SUCCESS
+[pthread_exit.array_bounds.2] line 158 array '__cs_keys'[] upper bound in __cs_keys[(signed long int)0][(signed long int)((signed int)__cs_thread_index + 1)]: SUCCESS
+[pthread_exit.overflow.1] line 158 arithmetic overflow on signed + in (signed int)__cs_thread_index + 1: SUCCESS
+[pthread_exit.array_bounds.3] line 161 array '__cs_keys'[] lower bound in __cs_keys[(signed long int)0][(signed long int)((signed int)__cs_thread_index + 1)]: SUCCESS
+[pthread_exit.array_bounds.4] line 161 array '__cs_keys'[] upper bound in __cs_keys[(signed long int)0][(signed long int)((signed int)__cs_thread_index + 1)]: SUCCESS
+[pthread_exit.array_bounds.5] line 161 array '__cs_keys'[] lower bound in __cs_keys[(signed long int)0][(signed long int)((signed int)__cs_thread_index + 1)]: SUCCESS
+[pthread_exit.array_bounds.6] line 161 array '__cs_keys'[] upper bound in __cs_keys[(signed long int)0][(signed long int)((signed int)__cs_thread_index + 1)]: SUCCESS
+[pthread_exit.overflow.2] line 161 arithmetic overflow on signed + in (signed int)__cs_thread_index + 1: SUCCESS
+[pthread_exit.overflow.3] line 161 arithmetic overflow on signed + in (signed int)__cs_thread_index + 1: SUCCESS
+[pthread_exit.pointer_dereference.1] line 161 dereference failure: pointer NULL in __cs_key_destructor[(signed long int)0]: SUCCESS
+[pthread_exit.pointer_dereference.2] line 161 dereference failure: pointer invalid in __cs_key_destructor[(signed long int)0]: SUCCESS
+[pthread_exit.pointer_dereference.3] line 161 dereference failure: deallocated dynamic object in __cs_key_destructor[(signed long int)0]: SUCCESS
+[pthread_exit.pointer_dereference.4] line 161 dereference failure: dead object in __cs_key_destructor[(signed long int)0]: SUCCESS
+[pthread_exit.pointer_dereference.5] line 161 dereference failure: pointer outside object bounds in __cs_key_destructor[(signed long int)0]: SUCCESS
+[pthread_exit.pointer_dereference.6] line 161 dereference failure: invalid integer address in __cs_key_destructor[(signed long int)0]: SUCCESS
+[pthread_exit.pointer_dereference.7] line 161 dereferenced function pointer must be one of [t1_0, t2_0]: SUCCESS
+
+/Users/miadark/Projects/COMP63342-Software_Security/coursework_4/_cs_cw_2_input.c function pthread_getspecific
+[pthread_getspecific.array_bounds.1] line 364 array '__cs_keys' lower bound in __cs_keys[(signed long int)key]: SUCCESS
+[pthread_getspecific.array_bounds.2] line 364 array '__cs_keys' upper bound in __cs_keys[(signed long int)key]: SUCCESS
+[pthread_getspecific.array_bounds.3] line 364 array '__cs_keys'[] lower bound in __cs_keys[(signed long int)key][(signed long int)((signed int)__cs_thread_index + 1)]: SUCCESS
+[pthread_getspecific.array_bounds.4] line 364 array '__cs_keys'[] upper bound in __cs_keys[(signed long int)key][(signed long int)((signed int)__cs_thread_index + 1)]: SUCCESS
+[pthread_getspecific.overflow.1] line 364 arithmetic overflow on signed + in (signed int)__cs_thread_index + 1: SUCCESS
+
+/Users/miadark/Projects/COMP63342-Software_Security/coursework_4/_cs_cw_2_input.c function pthread_join
+[pthread_join.array_bounds.1] line 149 array '__cs_pc' lower bound in __cs_pc[(signed long int)__cs_id]: SUCCESS
+[pthread_join.array_bounds.2] line 149 array '__cs_pc' upper bound in __cs_pc[(signed long int)__cs_id]: SUCCESS
+[pthread_join.array_bounds.3] line 149 array '__cs_thread_lines' lower bound in __cs_thread_lines[(signed long int)__cs_id]: SUCCESS
+[pthread_join.array_bounds.4] line 149 array '__cs_thread_lines' upper bound in __cs_thread_lines[(signed long int)__cs_id]: SUCCESS
+
+/Users/miadark/Projects/COMP63342-Software_Security/coursework_4/_cs_cw_2_input.c function pthread_key_create
+[pthread_key_create.overflow.1] line 346 arithmetic overflow on signed + in currentkey + 1: SUCCESS
+[pthread_key_create.pointer_dereference.1] line 346 dereference failure: pointer NULL in *key: SUCCESS
+[pthread_key_create.pointer_dereference.2] line 346 dereference failure: pointer invalid in *key: SUCCESS
+[pthread_key_create.pointer_dereference.3] line 346 dereference failure: deallocated dynamic object in *key: SUCCESS
+[pthread_key_create.pointer_dereference.4] line 346 dereference failure: dead object in *key: SUCCESS
+[pthread_key_create.pointer_dereference.5] line 346 dereference failure: pointer outside object bounds in *key: SUCCESS
+[pthread_key_create.pointer_dereference.6] line 346 dereference failure: invalid integer address in *key: SUCCESS
+
+/Users/miadark/Projects/COMP63342-Software_Security/coursework_4/_cs_cw_2_input.c function pthread_mutex_destroy
+[pthread_mutex_destroy.pointer_dereference.1] line 189 dereference failure: pointer NULL in *__cs_mutex_to_destroy: SUCCESS
+[pthread_mutex_destroy.pointer_dereference.2] line 189 dereference failure: pointer invalid in *__cs_mutex_to_destroy: SUCCESS
+[pthread_mutex_destroy.pointer_dereference.3] line 189 dereference failure: deallocated dynamic object in *__cs_mutex_to_destroy: SUCCESS
+[pthread_mutex_destroy.pointer_dereference.4] line 189 dereference failure: dead object in *__cs_mutex_to_destroy: SUCCESS
+[pthread_mutex_destroy.pointer_dereference.5] line 189 dereference failure: pointer outside object bounds in *__cs_mutex_to_destroy: SUCCESS
+[pthread_mutex_destroy.pointer_dereference.6] line 189 dereference failure: invalid integer address in *__cs_mutex_to_destroy: SUCCESS
+
+/Users/miadark/Projects/COMP63342-Software_Security/coursework_4/_cs_cw_2_input.c function pthread_mutex_init
+[pthread_mutex_init.pointer_dereference.1] line 180 dereference failure: pointer NULL in *__cs_m: SUCCESS
+[pthread_mutex_init.pointer_dereference.2] line 180 dereference failure: pointer invalid in *__cs_m: SUCCESS
+[pthread_mutex_init.pointer_dereference.3] line 180 dereference failure: deallocated dynamic object in *__cs_m: SUCCESS
+[pthread_mutex_init.pointer_dereference.4] line 180 dereference failure: dead object in *__cs_m: SUCCESS
+[pthread_mutex_init.pointer_dereference.5] line 180 dereference failure: pointer outside object bounds in *__cs_m: SUCCESS
+[pthread_mutex_init.pointer_dereference.6] line 180 dereference failure: invalid integer address in *__cs_m: SUCCESS
+
+/Users/miadark/Projects/COMP63342-Software_Security/coursework_4/_cs_cw_2_input.c function pthread_mutex_lock
+[pthread_mutex_lock.pointer_dereference.1] line 200 dereference failure: pointer NULL in *__cs_mutex_to_lock: SUCCESS
+[pthread_mutex_lock.pointer_dereference.2] line 200 dereference failure: pointer invalid in *__cs_mutex_to_lock: SUCCESS
+[pthread_mutex_lock.pointer_dereference.3] line 200 dereference failure: deallocated dynamic object in *__cs_mutex_to_lock: SUCCESS
+[pthread_mutex_lock.pointer_dereference.4] line 200 dereference failure: dead object in *__cs_mutex_to_lock: SUCCESS
+[pthread_mutex_lock.pointer_dereference.5] line 200 dereference failure: pointer outside object bounds in *__cs_mutex_to_lock: SUCCESS
+[pthread_mutex_lock.pointer_dereference.6] line 200 dereference failure: invalid integer address in *__cs_mutex_to_lock: SUCCESS
+[pthread_mutex_lock.overflow.1] line 202 arithmetic overflow on signed + in (signed int)__cs_thread_index + 1: SUCCESS
+
+/Users/miadark/Projects/COMP63342-Software_Security/coursework_4/_cs_cw_2_input.c function pthread_mutex_unlock
+[pthread_mutex_unlock.overflow.1] line 213 arithmetic overflow on signed + in (signed int)__cs_thread_index + 1: SUCCESS
+[pthread_mutex_unlock.pointer_dereference.1] line 213 dereference failure: pointer NULL in *__cs_mutex_to_unlock: SUCCESS
+[pthread_mutex_unlock.pointer_dereference.2] line 213 dereference failure: pointer invalid in *__cs_mutex_to_unlock: SUCCESS
+[pthread_mutex_unlock.pointer_dereference.3] line 213 dereference failure: deallocated dynamic object in *__cs_mutex_to_unlock: SUCCESS
+[pthread_mutex_unlock.pointer_dereference.4] line 213 dereference failure: dead object in *__cs_mutex_to_unlock: SUCCESS
+[pthread_mutex_unlock.pointer_dereference.5] line 213 dereference failure: pointer outside object bounds in *__cs_mutex_to_unlock: SUCCESS
+[pthread_mutex_unlock.pointer_dereference.6] line 213 dereference failure: invalid integer address in *__cs_mutex_to_unlock: SUCCESS
+
+/Users/miadark/Projects/COMP63342-Software_Security/coursework_4/_cs_cw_2_input.c function pthread_self
+[pthread_self.overflow.1] line 169 arithmetic overflow on signed + in (signed int)__cs_thread_index + 1: SUCCESS
+
+/Users/miadark/Projects/COMP63342-Software_Security/coursework_4/_cs_cw_2_input.c function pthread_setspecific
+[pthread_setspecific.array_bounds.1] line 355 array '__cs_keys' lower bound in __cs_keys[(signed long int)key]: SUCCESS
+[pthread_setspecific.array_bounds.2] line 355 array '__cs_keys' upper bound in __cs_keys[(signed long int)key]: SUCCESS
+[pthread_setspecific.array_bounds.3] line 355 array '__cs_keys'[] lower bound in __cs_keys[(signed long int)key][(signed long int)((signed int)__cs_thread_index + 1)]: SUCCESS
+[pthread_setspecific.array_bounds.4] line 355 array '__cs_keys'[] upper bound in __cs_keys[(signed long int)key][(signed long int)((signed int)__cs_thread_index + 1)]: SUCCESS
+[pthread_setspecific.overflow.1] line 355 arithmetic overflow on signed + in (signed int)__cs_thread_index + 1: SUCCESS
+
+/Users/miadark/Projects/COMP63342-Software_Security/coursework_4/_cs_cw_2_input.c function t1_0
+[t1_0.pointer_dereference.1] line 392 dereference failure: pointer NULL in *__cs_local_t1_aptr1: SUCCESS
+[t1_0.pointer_dereference.2] line 392 dereference failure: pointer invalid in *__cs_local_t1_aptr1: SUCCESS
+[t1_0.pointer_dereference.3] line 392 dereference failure: deallocated dynamic object in *__cs_local_t1_aptr1: SUCCESS
+[t1_0.pointer_dereference.4] line 392 dereference failure: dead object in *__cs_local_t1_aptr1: SUCCESS
+[t1_0.pointer_dereference.5] line 392 dereference failure: pointer outside object bounds in *__cs_local_t1_aptr1: SUCCESS
+[t1_0.pointer_dereference.6] line 392 dereference failure: invalid integer address in *__cs_local_t1_aptr1: SUCCESS
+[t1_0.assertion.1] line 400 assertion __cs_local_t1_a1 == 10 && g == 0: SUCCESS
+
+/Users/miadark/Projects/COMP63342-Software_Security/coursework_4/_cs_cw_2_input.c function t2_0
+[t2_0.pointer_dereference.1] line 434 dereference failure: pointer NULL in *__cs_local_t2_aptr2: SUCCESS
+[t2_0.pointer_dereference.2] line 434 dereference failure: pointer invalid in *__cs_local_t2_aptr2: SUCCESS
+[t2_0.pointer_dereference.3] line 434 dereference failure: deallocated dynamic object in *__cs_local_t2_aptr2: SUCCESS
+[t2_0.pointer_dereference.4] line 434 dereference failure: dead object in *__cs_local_t2_aptr2: SUCCESS
+[t2_0.pointer_dereference.5] line 434 dereference failure: pointer outside object bounds in *__cs_local_t2_aptr2: SUCCESS
+[t2_0.pointer_dereference.6] line 434 dereference failure: invalid integer address in *__cs_local_t2_aptr2: SUCCESS
+[t2_0.assertion.1] line 440 assertion __cs_local_t2_a2 == 20: SUCCESS
+
+<builtin-library-malloc> function malloc
+[malloc.assertion.1] line 31 max allocation size exceeded: SUCCESS
+[malloc.assertion.2] line 36 max allocation may fail: SUCCESS
+
+** 0 of 169 failed (1 iterations)
+VERIFICATION SUCCESSFUL
